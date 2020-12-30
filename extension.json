@@ -1,38 +1,38 @@
 {
-	"name": "CategoryIntersectionSearch",
-	"version": "1.0.0",
-	"author": "[https://femiwiki.com/ Femiwiki Team]",
-	"url": "https://github.com/femiwiki/categoryIntersectionSearch",
-	"descriptionmsg": "categoryintersectionsearch-desc",
-	"license-name": "AGPL-3.0-or-later",
-	"type": "specialpage",
-	"requires": {
-		"MediaWiki": ">= 1.35.0",
-		"extensions": {
-			"CategoryTree": "*"
-		}
-	},
-	"AutoloadClasses": {
-		"SpecialCategoryIntersectionSearch": "SpecialCategoryIntersectionSearch.php",
-		"CategoryIntersectionSearchViewer": "CategoryIntersectionSearchViewer.php",
-		"CategoryIntersectionSearchHooks": "CategoryIntersectionSearchHooks.php"
-	},
-	"MessagesDirs": {
-		"CategoryIntersectionSearch": [
-			"i18n"
-		]
-	},
-	"SpecialPages": {
-		"CategoryIntersectionSearch": "SpecialCategoryIntersectionSearch"
-	},
-	"Hooks": {
-		"SpecialSearchResultsPrepend": [
-			"CategoryIntersectionSearchHooks::onSpecialSearchResultsPrepend"
-		]
-	},
-	"ExtensionMessagesFiles": {
-		"CategoryIntersectionSearchAlias": "CategoryIntersectionSearch.alias.php",
-		"CategoryIntersectionSearchMagic": "CategoryIntersectionSearch.i18n.magic.php"
-	},
-	"manifest_version": 1
+  "name": "CategoryIntersectionSearch",
+  "version": "1.0.0",
+  "author": "[https://femiwiki.com/ Femiwiki Team]",
+  "url": "https://github.com/femiwiki/categoryIntersectionSearch",
+  "descriptionmsg": "categoryintersectionsearch-desc",
+  "license-name": "AGPL-3.0-or-later",
+  "type": "specialpage",
+  "requires": {
+    "MediaWiki": ">= 1.35.0",
+    "extensions": {
+      "CategoryTree": "*"
+    }
+  },
+  "AutoloadClasses": {
+    "SpecialCategoryIntersectionSearch": "includes/SpecialCategoryIntersectionSearch.php",
+    "CategoryIntersectionSearchViewer": "includes/CategoryIntersectionSearchViewer.php",
+    "CategoryIntersectionSearchHooks": "includes/CategoryIntersectionSearchHooks.php"
+  },
+  "MessagesDirs": {
+    "CategoryIntersectionSearch": ["i18n"]
+  },
+  "SpecialPages": {
+    "CategoryIntersectionSearch": "SpecialCategoryIntersectionSearch"
+  },
+  "Hooks": {
+    "SpecialSearchResultsPrepend": [
+      "CategoryIntersectionSearchHooks::onSpecialSearchResultsPrepend"
+    ]
+  },
+  "ExtensionMessagesFiles": {
+    "CategoryIntersectionSearchAlias": "CategoryIntersectionSearch.alias.php"
+  },
+  "TestAutoloadNamespaces": {
+    "MediaWiki\\Extension\\CategoryIntersectionSearch\\Tests\\Unit\\": "tests/phpunit/unit/"
+  },
+  "manifest_version": 1
 }

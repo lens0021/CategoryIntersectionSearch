@@ -46,14 +46,14 @@ class CategoryIntersectionSearchHooks {
 		}
 
 		$categories = explode( ",", $term );
-		foreach ( $categories as $value ) {
+		foreach ( $categories as $i => $value ) {
 			if ( strpos( $value, "/" ) === false ) {
 				return null;
 			}
-			$value = trim( $value );
+			$categories[$i] = trim( $value );
 			$pos = strrchr( $value, ":" );
 			if ( $pos !== false ) {
-				$value = substr( $pos, 1 );
+				$categories[$i] = substr( $pos, 1 );
 			}
 		}
 

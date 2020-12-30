@@ -17,14 +17,14 @@ class SpecialCategoryIntersectionSearch extends SpecialPage {
 		$this->setHeaders();
 
 		if ( $par == '' ) {
-			$output->addWikitext( $this->msg( 'categoryintersectionsearch-noinput' ) );
+			$output->addWikiTextAsInterface( $this->msg( 'categoryintersectionsearch-noinput' ) );
 			return;
 		}
 		$titleParam = str_replace( '_', ' ', $par );
 		$this->splitPar( $titleParam );
 
 		if ( count( $this->categories ) === 0 && count( $this->exCategories ) > 0 ) {
-			$output->addWikitext( $this->msg( 'categoryintersectionsearch-noinput' ) );
+			$output->addWikiTextAsInterface( $this->msg( 'categoryintersectionsearch-noinput' ) );
 			return;
 		} elseif ( count( $this->categories ) < 2 && count( $this->exCategories ) == 0 ) {
 			$output->redirect( Title::newFromText( 'Category:' . $titleParam )->getFullURL() );
